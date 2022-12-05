@@ -4,6 +4,7 @@ import VerticalInput from './VerticalInput';
 import NumberInput from './NumberInput';
 import Select from './Select';
 import ImageInput from './ImageInput';
+import CheckboxInput from './CheckboxInput';
 
 export default class Form extends Component {
   render() {
@@ -30,6 +31,11 @@ export default class Form extends Component {
         <ImageInput />
 
         <Select name="cardRare" id="rare-input" content="Raridade" />
+
+        <div className="checkboxAndButton">
+          <CheckboxInput />
+          <button type="button" data-testid="save-button">Salvar</button>
+        </div>
       </form>
     );
   }
