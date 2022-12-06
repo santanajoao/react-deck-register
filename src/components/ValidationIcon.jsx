@@ -5,8 +5,8 @@ import sucessIcon from '../images/sucess.svg';
 
 export default class ValidationIcon extends Component {
   render() {
-    const { conditionalVariable } = this.props;
-    if (conditionalVariable) {
+    const { validationStatus } = this.props;
+    if (validationStatus) {
       return <img src={ sucessIcon } alt="Ícone de sucesso na validação" />;
     }
     return <img src={ errorIcon } alt="Ícone de erro na validação" />;
@@ -14,5 +14,5 @@ export default class ValidationIcon extends Component {
 }
 
 ValidationIcon.propTypes = {
-  conditionalVariable: PropTypes.bool.isRequired,
+  validationStatus: PropTypes.bool.isRequired,
 };

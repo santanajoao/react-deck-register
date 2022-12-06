@@ -20,7 +20,7 @@ export default class Form extends Component {
         <VerticalInput
           value={ cardName }
           type="text"
-          onInputChange={ onInputChange }
+          onChange={ onInputChange }
           name="cardName"
           id="name-input"
           content="Nome"
@@ -29,7 +29,7 @@ export default class Form extends Component {
         <VerticalInput
           value={ cardDescription }
           type="textarea"
-          onInputChange={ onInputChange }
+          onChange={ onInputChange }
           name="cardDescription"
           id="description-input"
           content="Descrição"
@@ -38,7 +38,7 @@ export default class Form extends Component {
         <HorizontalInput
           value={ cardAttr1 }
           type="number"
-          onInputChange={ onInputChange }
+          onChange={ onInputChange }
           name="cardAttr1"
           id="attr1-input"
           content="Attr01"
@@ -46,7 +46,7 @@ export default class Form extends Component {
         <HorizontalInput
           value={ cardAttr2 }
           type="number"
-          onInputChange={ onInputChange }
+          onChange={ onInputChange }
           name="cardAttr2"
           id="attr2-input"
           content="Attr02"
@@ -54,7 +54,7 @@ export default class Form extends Component {
         <HorizontalInput
           value={ cardAttr3 }
           type="number"
-          onInputChange={ onInputChange }
+          onChange={ onInputChange }
           name="cardAttr3"
           id="attr3-input"
           content="Attr03"
@@ -63,7 +63,7 @@ export default class Form extends Component {
         <HorizontalInput
           value={ cardImage }
           type="text"
-          onInputChange={ onInputChange }
+          onChange={ onInputChange }
           name="cardImage"
           id="image-input"
           content="Imagem"
