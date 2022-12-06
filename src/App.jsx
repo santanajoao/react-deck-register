@@ -1,21 +1,27 @@
 import React from 'react';
+import styles from './App.module.css';
 import Header from './components/Header';
 import Form from './components/Form';
 import Card from './components/Card';
-import styles from './App.module.css';
+import CardList from './components/CardList';
+
+const INITIAL_STATE = {
+  cardAttr1: '0',
+  cardAttr2: '0',
+  cardAttr3: '0',
+  cardDescription: '',
+  cardImage: '',
+  cardName: '',
+  cardTrunfo: false,
+  cardRare: 'normal',
+  isSaveButtonDisabled: true,
+};
 
 class App extends React.Component {
   state = {
-    cardAttr1: '0',
-    cardAttr2: '0',
-    cardAttr3: '0',
-    cardDescription: '',
-    cardImage: '',
-    cardName: '',
-    cardTrunfo: false,
-    cardRare: 'normal',
+    ...INITIAL_STATE,
     hasTrunfo: false,
-    isSaveButtonDisabled: true,
+    savedCards: [],
   };
 
   isEmpty = (...values) => (
@@ -54,9 +60,48 @@ class App extends React.Component {
     this.setState({ [name]: value }, this.executeValidation);
   };
 
-  onSaveButtonClick = () => {};
+  generateKey = () => {
+    const letters = 'abcdefghijklmnoprstuvwxyz';
+    const numbers = '0123456789';
+    const simbols = '!@#$%&_-~';
+    const all = letters + numbers + simbols;
+    const keyLength = 5;
+    let key = '';
+    while (key.length < keyLength) {
+      const randomIndex = Math.floor(Math.random() * all.length);
+      key += all[randomIndex];
+    }
+    return key;
+  };
+
+  onSaveButtonClick = () => {
+    this.setState((prevState) => {
+      const {
+        cardAttr1, cardAttr2, cardAttr3, cardDescription,
+        cardImage, cardName, cardRare, cardTrunfo, hasTrunfo,
+      } = prevState;
+
+      const newCard = {
+        cardAttr1,
+        cardAttr2,
+        cardAttr3,
+        cardDescription,
+        cardImage,
+        cardName,
+        cardRare,
+        cardTrunfo,
+        id: this.generateKey(),
+      };
+
+      return {
+        savedCards: [...prevState.savedCards, newCard],
+        hasTrunfo: cardTrunfo || hasTrunfo,
+      };
+    }, () => this.setState(INITIAL_STATE));
+  };
 
   render() {
+    const { savedCards } = this.state;
     return (
       <div className={ styles.App }>
         <Header />
@@ -67,8 +112,10 @@ class App extends React.Component {
             onInputChange={ this.onInputChange }
             onSaveButtonClick={ this.onSaveButtonClick }
           />
+
           <Card { ...this.state } />
         </article>
+        <CardList savedCards={ savedCards } />
       </div>
     );
   }

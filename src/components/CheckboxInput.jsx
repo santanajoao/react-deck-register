@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 export default class CheckboxInput extends React.Component {
   render() {
-    const { onInputChange, cardTrunfo } = this.props;
+    const { onInputChange, cardTrunfo, hasTrunfo } = this.props;
+    if (hasTrunfo) {
+      return <p>Você já tem um Super Trunfo em seu baralho</p>;
+    }
+
     return (
       <label htmlFor="trunfo-input">
         <input
@@ -21,6 +25,7 @@ export default class CheckboxInput extends React.Component {
 }
 
 CheckboxInput.propTypes = {
-  onInputChange: PropTypes.func.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
+  onInputChange: PropTypes.func.isRequired,
 };

@@ -10,9 +10,8 @@ export default class Form extends Component {
   render() {
     const {
       cardAttr1, cardAttr2, cardAttr3, cardDescription,
-      cardImage, cardName, cardTrunfo, cardRare,
+      cardImage, cardName, cardTrunfo, cardRare, hasTrunfo,
       isSaveButtonDisabled, onSaveButtonClick, onInputChange,
-      // hasTrunfo
     } = this.props;
 
     return (
@@ -74,6 +73,7 @@ export default class Form extends Component {
         <div className="checkboxAndButton">
           <CheckboxInput
             onInputChange={ onInputChange }
+            hasTrunfo={ hasTrunfo }
             cardTrunfo={ cardTrunfo }
           />
 
@@ -100,7 +100,7 @@ Form.propTypes = {
   cardName: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
   cardRare: PropTypes.string.isRequired,
-  // hasTrunfo: PropTypes.bool.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
   isSaveButtonDisabled: PropTypes.bool.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,
   onInputChange: PropTypes.func.isRequired,
