@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './VerticalInput.module.css';
+import styles from '../styles/VerticalInput.module.css';
 import ValidationIcon from './ValidationIcon';
 
 export default class VerticalInput extends Component {

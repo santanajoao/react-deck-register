@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ValidationIcon from './ValidationIcon';
-import styles from './HorizontalInput.module.css';
+import styles from '../styles/HorizontalInput.module.css';
 
 export default class HorizontalInput extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-import styles from './Select.module.css';
+import styles from '../styles/Select.module.css';
 
 export default class Select extends Component {
   render() {

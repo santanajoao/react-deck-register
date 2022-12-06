@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './Form.module.css';
+import styles from '../styles/Form.module.css';
 import VerticalInput from './VerticalInput';
 import HorizontalInput from './HorizontalInput';
 import Select from './Select';
