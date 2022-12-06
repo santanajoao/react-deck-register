@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Form from './components/Form';
+import Card from './components/Card';
 
 class App extends React.Component {
   state = {
@@ -35,6 +36,7 @@ class App extends React.Component {
             onInputChange={ this.onInputChange }
             onSaveButtonClick={ this.onSaveButtonClick }
           />
+          <Card { ...this.state } />
         </article>
       </div>
     );
