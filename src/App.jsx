@@ -100,6 +100,23 @@ class App extends React.Component {
     }, () => this.setState(INITIAL_STATE));
   };
 
+  removeCardFromList = ({ target }) => {
+    this.setState(({ savedCards, hasTrunfo }) => {
+      let removedWasTrunfo;
+      const updatedCards = savedCards.filter(({ id, cardTrunfo }) => {
+        if (id === target.id) {
+          removedWasTrunfo = cardTrunfo;
+        }
+        return id !== target.id;
+      });
+
+      return {
+        savedCards: updatedCards,
+        hasTrunfo: removedWasTrunfo ? false : hasTrunfo,
+      };
+    });
+  };
+
   render() {
     const { savedCards } = this.state;
     return (
@@ -115,7 +132,10 @@ class App extends React.Component {
 
           <Card { ...this.state } />
         </article>
-        <CardList savedCards={ savedCards } />
+        <CardList
+          savedCards={ savedCards }
+          removeCardFromList={ this.removeCardFromList }
+        />
       </div>
     );
   }

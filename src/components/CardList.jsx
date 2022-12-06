@@ -4,13 +4,21 @@ import Card from './Card';
 
 export default class CardList extends Component {
   render() {
-    const { savedCards } = this.props;
+    const { savedCards, removeCardFromList } = this.props;
     return (
       <ul>
         {
           savedCards.map((cardObj) => (
-            <li key={ cardObj.id } id={ cardObj.id }>
+            <li key={ cardObj.id }>
               <Card { ...cardObj } />
+              <button
+                type="button"
+                onClick={ removeCardFromList }
+                id={ cardObj.id }
+                data-testid="delete-button"
+              >
+                Excluir
+              </button>
             </li>
           ))
         }
@@ -20,6 +28,7 @@ export default class CardList extends Component {
 }
 
 CardList.propTypes = {
+  removeCardFromList: PropTypes.func.isRequired,
   savedCards: PropTypes.arrayOf(
     PropTypes.shape({
       cardAttr1: PropTypes.string.isRequired,
