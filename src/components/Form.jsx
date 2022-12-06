@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import styles from './Form.module.css';
 import VerticalInput from './VerticalInput';
-import NumberInput from './NumberInput';
+import HorizontalInput from './HorizontalInput';
 import Select from './Select';
-import ImageInput from './ImageInput';
 import CheckboxInput from './CheckboxInput';
 
 export default class Form extends Component {
@@ -24,16 +23,37 @@ export default class Form extends Component {
           content="Descrição"
         />
 
-        <NumberInput name="cardAttr1" id="attr1-input" content="Attr01" />
-        <NumberInput name="cardAttr2" id="attr2-input" content="Attr02" />
-        <NumberInput name="cardAttr3" id="attr3-input" content="Attr03" />
+        <HorizontalInput
+          type="number"
+          name="cardAttr1"
+          id="attr1-input"
+          content="Attr01"
+        />
+        <HorizontalInput
+          type="number"
+          name="cardAttr2"
+          id="attr2-input"
+          content="Attr02"
+        />
+        <HorizontalInput
+          type="number"
+          name="cardAttr3"
+          id="attr3-input"
+          content="Attr03"
+        />
 
-        <ImageInput />
+        <HorizontalInput
+          type="text"
+          name="cardImage"
+          id="image-input"
+          content="Imagem"
+        />
 
         <Select name="cardRare" id="rare-input" content="Raridade" />
 
         <div className="checkboxAndButton">
           <CheckboxInput />
+
           <button type="button" data-testid="save-button">Salvar</button>
         </div>
       </form>
