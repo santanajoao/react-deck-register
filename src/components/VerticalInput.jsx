@@ -9,9 +9,9 @@ export default class VerticalInput extends Component {
 
     let input;
     if (type === 'text') {
-      input = <input type="text" name={ name } id={ id } />;
+      input = <input type="text" name={ name } id={ id } data-testid={ id } />;
     } else {
-      input = <textarea name={ name } id={ id } />;
+      input = <textarea name={ name } id={ id } data-testid={ id } />;
     }
 
     return (

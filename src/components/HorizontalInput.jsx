@@ -9,9 +9,18 @@ export default class HorizontalInput extends Component {
 
     let input;
     if (type === 'number') {
-      input = <input type="number" min="0" max="90" name={ name } id={ id } />;
+      input = (
+        <input
+          type="number"
+          min="0"
+          max="90"
+          name={ name }
+          id={ id }
+          data-testid={ id }
+        />
+      );
     } else {
-      input = <input type="text" name={ name } id={ id } />;
+      input = <input type="text" name={ name } id={ id } data-testid={ id } />;
     }
 
     return (

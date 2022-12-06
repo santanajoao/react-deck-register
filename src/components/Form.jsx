@@ -49,7 +49,7 @@ export default class Form extends Component {
           content="Imagem"
         />
 
-        <Select name="cardRare" id="rare-input" content="Raridade" />
+        <Select />
 
         <div className="checkboxAndButton">
           <CheckboxInput />
