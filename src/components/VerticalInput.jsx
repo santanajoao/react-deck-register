@@ -5,13 +5,30 @@ import ValidationIcon from './ValidationIcon';
 
 export default class VerticalInput extends Component {
   render() {
-    const { content, id, name, type } = this.props;
+    const { content, id, name, onInputChange, type, value } = this.props;
 
     let input;
     if (type === 'text') {
-      input = <input type="text" name={ name } id={ id } data-testid={ id } />;
+      input = (
+        <input
+          value={ value }
+          type="text"
+          onChange={ onInputChange }
+          name={ name }
+          id={ id }
+          data-testid={ id }
+        />
+      );
     } else {
-      input = <textarea name={ name } id={ id } data-testid={ id } />;
+      input = (
+        <textarea
+          value={ value }
+          onChange={ onInputChange }
+          name={ name }
+          id={ id }
+          data-testid={ id }
+        />
+      );
     }
 
     return (
@@ -30,5 +47,7 @@ VerticalInput.propTypes = {
   content: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styles from '../styles/Form.module.css';
 import VerticalInput from './VerticalInput';
 import HorizontalInput from './HorizontalInput';
@@ -7,56 +8,100 @@ import CheckboxInput from './CheckboxInput';
 
 export default class Form extends Component {
   render() {
+    const {
+      cardAttr1, cardAttr2, cardAttr3, cardDescription,
+      cardImage, cardName, cardTrunfo, cardRare,
+      isSaveButtonDisabled, onSaveButtonClick, onInputChange,
+      // hasTrunfo
+    } = this.props;
+
     return (
       <form className={ styles.Form }>
         <VerticalInput
+          value={ cardName }
           type="text"
+          onInputChange={ onInputChange }
           name="cardName"
           id="name-input"
           content="Nome"
         />
 
         <VerticalInput
+          value={ cardDescription }
           type="textarea"
+          onInputChange={ onInputChange }
           name="cardDescription"
           id="description-input"
           content="Descrição"
         />
 
         <HorizontalInput
+          value={ cardAttr1 }
           type="number"
+          onInputChange={ onInputChange }
           name="cardAttr1"
           id="attr1-input"
           content="Attr01"
         />
         <HorizontalInput
+          value={ cardAttr2 }
           type="number"
+          onInputChange={ onInputChange }
           name="cardAttr2"
           id="attr2-input"
           content="Attr02"
         />
         <HorizontalInput
+          value={ cardAttr3 }
           type="number"
+          onInputChange={ onInputChange }
           name="cardAttr3"
           id="attr3-input"
           content="Attr03"
         />
 
         <HorizontalInput
+          value={ cardImage }
           type="text"
+          onInputChange={ onInputChange }
           name="cardImage"
           id="image-input"
           content="Imagem"
         />
 
-        <Select />
+        <Select value={ cardRare } onInputChange={ onInputChange } />
 
         <div className="checkboxAndButton">
-          <CheckboxInput />
+          <CheckboxInput
+            onInputChange={ onInputChange }
+            cardTrunfo={ cardTrunfo }
+          />
 
-          <button type="button" data-testid="save-button">Salvar</button>
+          <button
+            type="button"
+            onClick={ onSaveButtonClick }
+            disabled={ isSaveButtonDisabled }
+            data-testid="save-button"
+          >
+            Salvar
+          </button>
         </div>
       </form>
     );
   }
 }
+
+Form.propTypes = {
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardName: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.bool.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  // hasTrunfo: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+};

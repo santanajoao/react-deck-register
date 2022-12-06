@@ -5,22 +5,33 @@ import styles from '../styles/HorizontalInput.module.css';
 
 export default class HorizontalInput extends Component {
   render() {
-    const { content, id, name, type } = this.props;
+    const { content, id, name, onInputChange, type, value } = this.props;
 
     let input;
     if (type === 'number') {
       input = (
         <input
+          value={ value }
           type="number"
+          onChange={ onInputChange }
+          name={ name }
           min="0"
           max="90"
-          name={ name }
           id={ id }
           data-testid={ id }
         />
       );
     } else {
-      input = <input type="text" name={ name } id={ id } data-testid={ id } />;
+      input = (
+        <input
+          value={ value }
+          type="text"
+          onChange={ onInputChange }
+          name={ name }
+          id={ id }
+          data-testid={ id }
+        />
+      );
     }
 
     return (
@@ -36,6 +47,8 @@ export default class HorizontalInput extends Component {
 HorizontalInput.propTypes = {
   content: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
