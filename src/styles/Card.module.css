@@ -1,26 +1,26 @@
 .Card {
-  box-sizing: border-box;
-  width: 315px;
   background: #036B52;
   border-radius: 10px;
+  box-sizing: border-box;
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.8);
   outline: 8px solid white;
   padding: 13px;
+  width: 315px;
 }
 
 .Card > h2 {
-  display: flex;
   align-items: center;
-  justify-content: flex-end;
   background: #023031;
-  color: white;
-  text-align: right;
-  height: 39px;
   border-radius: 10px 10px 0 0;
-  margin: 0;
+  color: white;
+  display: flex;
   font-size: 28px;
-  padding: 0 15px;
+  height: 39px;
+  justify-content: flex-end;
+  margin: 0;
   overflow: hidden;
+  padding: 0 15px;
+  text-align: right;
   white-space: nowrap;
 }
 
@@ -31,71 +31,71 @@
 }
 
 .Card > p {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 300px;
+  margin: 5px;
+  max-height: 45px;
   overflow: hidden;
   overflow-y: scroll;
-  background-color: transparent;
-  margin: 5px;
-  color: white;
-  font-weight: 300px;
-  font-size: 16px;
-  max-height: 45px;
   word-wrap: break-word;
 }
 
 .Card > ul {
-  padding: 20px;
-  margin: 10px 0 0 0;
-  list-style: none;
   background-color: white;
   border-radius: 0 0 10px 10px;
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 20px;
 }
 
 .Card > ul > li {
+  align-items: center;
+  background-color: #023031;
+  border-radius: 10px;
+  color: white;
+  display: flex;
   font-size: 16px;
   font-weight: 600;
-  color: white;
-  background-color: #023031;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 30px;
-  border-radius: 10px;
+  justify-content: space-between;
   margin: 5px;
 }
 
 .Card > ul > li > h3 {
-  padding-left: 10px;
-  display: flex;
   align-items: center;
+  background-color: #F0F2F5;
+  border: 1px solid #F0F2F5;
+  border-radius: 9px 0 0 9px;
+  color: #3D495C;
+  display: flex;
+  font-size: 16px;
   flex-grow: 1;
   height: 100%;
-  font-size: 16px;
-  color: #3D495C;
-  background-color: #F0F2F5;
-  border-radius: 9px 0 0 9px;
-  border: 1px solid #F0F2F5;
   margin: 0;
+  padding-left: 10px;
 }
 
 .Card > ul > li > span {
-  width: 40px;
-  text-align: center;
   overflow: hidden;
+  text-align: center;
+  width: 40px;
 }
 
 .Card > div {
-  margin-top: 10px;
+  align-items: center;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  margin-top: 10px;
 }
 
 .Card > div > span {
-  width: fit-content;
-  text-transform: capitalize;
+  background-color: teal;
+  border-radius: 0 10px 0 10px;
   color: white;
   font-weight: 600;
-  background-color: teal;
   padding: 5px;
-  border-radius: 0 10px 0 10px
+  text-transform: capitalize;
+  width: fit-content;
 }

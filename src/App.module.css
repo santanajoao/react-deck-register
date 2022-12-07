@@ -6,6 +6,7 @@
 }
 
 .formAndPreview {
+  align-items: center;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.8);
@@ -13,5 +14,4 @@
   height: 721px;
   justify-content: space-around;
   width: 1124px;
-  align-items: center;
 }

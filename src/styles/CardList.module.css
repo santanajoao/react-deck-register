@@ -1,27 +1,28 @@
 .CardList {
-  width: 1124px;
   align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  width: 1124px;
 }
 
 .CardList > li {
-  background-color: transparent;
-  margin: 20px;
   align-items: center;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 20px;
 }
 
 .CardList button {
-  margin-top: 15px;
   background-color: #BD0007;
+  border: none;
+  border-radius: 2px;
   color: white;
   cursor: pointer;
-  width: 115px;
+  font-size: 16px;
   height: 40px;
-  border-radius: 2px;
-  border: none;
+  margin-top: 20px;
+  width: 115px;
 }

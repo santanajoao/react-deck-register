@@ -3,20 +3,21 @@
 }
 
 .checkboxAndButton {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-between;
   width: 370px;
 }
 
 .checkboxAndButton > button {
   background: rgb(47, 193, 140);
+  border: none;
+  border-radius: 2px;
   color: white;
   cursor: pointer;
-  width: 115px;
+  font-size: 16px;
   height: 40px;
-  border-radius: 2px;
-  border: none;
+  width: 115px;
 }
 
 .checkboxAndButton > button:disabled {
