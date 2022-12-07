@@ -1,6 +1,6 @@
 .App {
   align-items: center;
-  background-color: green;
+  background-image: linear-gradient(to bottom, #052727, #227E68);
   display: flex;
   flex-direction: column;
 }
