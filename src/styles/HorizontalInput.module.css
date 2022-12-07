@@ -1,4 +1,26 @@
-.label {
+.HorizontalInput {
+  margin: 5px 0;
+  width: 100%;
   align-items: center;
   display: flex;
+  color: #3D495C;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+}
+
+.HorizontalInput input {
+  width: 275px;
+  height: 37px;
+  border-radius: 2px;
+  border: 1px solid rgb(41, 49, 61);
+  font-size: 14px;
+  margin-right: 18px;
+  outline: none;
+}
+
+.HorizontalInput > div {
+  display: flex;
+  align-items: center;
 }

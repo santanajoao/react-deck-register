@@ -1,3 +1,101 @@
 .Card {
-  
+  box-sizing: border-box;
+  width: 315px;
+  background: #036B52;
+  border-radius: 10px;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.8);
+  outline: 8px solid white;
+  padding: 13px;
+}
+
+.Card > h2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #023031;
+  color: white;
+  text-align: right;
+  height: 39px;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+  font-size: 28px;
+  padding: 0 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Card > img {
+  display: block;
+  height: 200px;
+  width: 100%
+}
+
+.Card > p {
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: transparent;
+  margin: 5px;
+  color: white;
+  font-weight: 300px;
+  font-size: 16px;
+  max-height: 45px;
+  word-wrap: break-word;
+}
+
+.Card > ul {
+  padding: 20px;
+  margin: 10px 0 0 0;
+  list-style: none;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+.Card > ul > li {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #023031;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.Card > ul > li > h3 {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  font-size: 16px;
+  color: #3D495C;
+  background-color: #F0F2F5;
+  border-radius: 9px 0 0 9px;
+  border: 1px solid #F0F2F5;
+  margin: 0;
+}
+
+.Card > ul > li > span {
+  width: 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Card > div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Card > div > span {
+  width: fit-content;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 600;
+  background-color: teal;
+  padding: 5px;
+  border-radius: 0 10px 0 10px
 }

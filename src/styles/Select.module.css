@@ -2,4 +2,28 @@
   display: flex;
   flex-direction: column;
   width: fit-content;
+  margin: 15px 0;
+}
+
+.Select > span {
+  color: #3D495C;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.Select > select {
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #3D495C;
+  color: #C5C9CE;
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  width: 370px;
+}
+
+.Select > select:focus {
+  color: #3D495C;
+  height: 40px;
 }

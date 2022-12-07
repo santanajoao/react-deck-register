@@ -11,15 +11,28 @@ export default class VerticalInput extends Component {
 
     let input;
     if (type === 'text') {
-      input = <input type="text" data-testid={ id } { ...commonProps } />;
+      input = (
+        <input
+          type="text"
+          data-testid={ id }
+          { ...commonProps }
+          className={ styles.input }
+        />
+      );
     } else {
-      input = <textarea data-testid={ id } { ...commonProps } />;
+      input = (
+        <textarea
+          data-testid={ id }
+          { ...commonProps }
+          className={ styles.textarea }
+        />
+      );
     }
 
     return (
-      <label htmlFor={ id }>
+      <label htmlFor={ id } className={ styles.VerticalInput }>
         <span>{ content }</span>
-        <div className={ styles.inputAndIcon }>
+        <div>
           { input }
           <ValidationIcon validationStatus={ validationStatus } />
         </div>

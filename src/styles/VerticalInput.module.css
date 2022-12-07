@@ -1,4 +1,32 @@
-.inputAndIcon {
+.VerticalInput > div {
   align-items: center;
   display: flex;
+  justify-content: space-between;
+}
+
+.VerticalInput > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #3D495C;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.input, .textarea {
+  margin-bottom: 6px ;
+  font-size: 14px;
+  width: 365px;
+  border: none;
+  border-bottom: 1px solid #3D495C;
+  outline: none;
+}
+
+.input {
+  height: 37px;
+}
+
+.textarea {
+  height: 80px;
+  resize: none;
 }

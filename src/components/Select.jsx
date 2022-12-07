@@ -7,7 +7,7 @@ export default class Select extends Component {
     const { onInputChange, value } = this.props;
     return (
       <label htmlFor="rare-input" className={ styles.Select }>
-        <span>Rarirade</span>
+        <span>Raridade</span>
         <select
           value={ value }
           onChange={ onInputChange }

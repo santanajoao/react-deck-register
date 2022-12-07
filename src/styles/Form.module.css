@@ -1,3 +1,32 @@
 .Form {
+  width: 405px;
+}
 
+.checkboxAndButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 370px;
+}
+
+.checkboxAndButton > button {
+  background: rgb(47, 193, 140);
+  color: white;
+  cursor: pointer;
+  width: 115px;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+}
+
+.checkboxAndButton > button:disabled {
+  background-color: lightgray;
+}
+
+.checkboxAndButton > button:disabled:hover {
+  background-color: lightgray;
+}
+
+.checkboxAndButton > button:hover {
+  background-color: rgb(40, 185, 135);
 }

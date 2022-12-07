@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/CheckboxInput.module.css';
 
 export default class CheckboxInput extends React.Component {
   render() {
@@ -9,7 +10,7 @@ export default class CheckboxInput extends React.Component {
     }
 
     return (
-      <label htmlFor="trunfo-input">
+      <label htmlFor="trunfo-input" className={ styles.CheckboxInput }>
         <input
           type="checkbox"
           onChange={ onInputChange }

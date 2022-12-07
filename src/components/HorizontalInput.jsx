@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ValidationIcon from './ValidationIcon';
-import styles from '../styles/HorizontalInput.module.css';
+import style from '../styles/HorizontalInput.module.css';
 
 export default class HorizontalInput extends Component {
   render() {
@@ -13,9 +13,7 @@ export default class HorizontalInput extends Component {
     const maxAttr = 90;
 
     if (type === 'number') {
-      input = (
-        <input min="0" max="90" data-testid={ id } { ...commonProps } />
-      );
+      input = <input min="0" max="90" data-testid={ id } { ...commonProps } />;
 
       const number = Number(value);
       validationStatus = number >= 0 && number <= maxAttr && value !== '';
@@ -28,10 +26,12 @@ export default class HorizontalInput extends Component {
     }
 
     return (
-      <label htmlFor={ id } className={ styles.label }>
+      <label htmlFor={ id } className={ style.HorizontalInput }>
         <span>{ content }</span>
-        { input }
-        <ValidationIcon validationStatus={ validationStatus } />
+        <div>
+          { input }
+          <ValidationIcon validationStatus={ validationStatus } />
+        </div>
       </label>
     );
   }

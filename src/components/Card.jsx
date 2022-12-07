@@ -16,12 +16,23 @@ export default class Card extends Component {
         <img src={ cardImage } data-testid="image-card" alt={ cardName } />
         <p data-testid="description-card">{ cardDescription }</p>
         <ul>
-          <li data-testid="attr1-card">{ cardAttr1 }</li>
-          <li data-testid="attr2-card">{ cardAttr2 }</li>
-          <li data-testid="attr3-card">{ cardAttr3 }</li>
+          <li data-testid="attr1-card">
+            <h3>Attr01</h3>
+            <span>{ cardAttr1 }</span>
+          </li>
+          <li data-testid="attr2-card">
+            <h3>Attr02</h3>
+            <span>{ cardAttr2 }</span>
+          </li>
+          <li data-testid="attr3-card">
+            <h3>Attr03</h3>
+            <span>{ cardAttr3 }</span>
+          </li>
         </ul>
-        <span data-testid="rare-card">{ cardRare }</span>
-        <Trunfo cardTrunfo={ cardTrunfo } />
+        <div>
+          <span data-testid="rare-card">{ cardRare }</span>
+          <Trunfo cardTrunfo={ cardTrunfo } />
+        </div>
       </div>
     );
   }

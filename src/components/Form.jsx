@@ -70,7 +70,7 @@ export default class Form extends Component {
 
         <Select value={ cardRare } onInputChange={ onInputChange } />
 
-        <div className="checkboxAndButton">
+        <div className={ styles.checkboxAndButton }>
           <CheckboxInput
             onInputChange={ onInputChange }
             hasTrunfo={ hasTrunfo }

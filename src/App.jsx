@@ -132,10 +132,12 @@ class App extends React.Component {
 
           <Card { ...this.state } />
         </article>
-        <CardList
-          savedCards={ savedCards }
-          removeCardFromList={ this.removeCardFromList }
-        />
+        <section className={ styles.filterAndCardList }>
+          <CardList
+            savedCards={ savedCards }
+            removeCardFromList={ this.removeCardFromList }
+          />
+        </section>
       </div>
     );
   }

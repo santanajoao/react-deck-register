@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/CardList.module.css';
 import Card from './Card';
 
 export default class CardList extends Component {
   render() {
     const { savedCards, removeCardFromList } = this.props;
     return (
-      <ul>
+      <ul className={ styles.CardList }>
         {
           savedCards.map((cardObj) => (
             <li key={ cardObj.id }>

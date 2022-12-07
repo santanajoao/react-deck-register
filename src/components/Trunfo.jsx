@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/Trunfo.module.css';
 
 export default class Trunfo extends Component {
   render() {
     const { cardTrunfo } = this.props;
     if (cardTrunfo) {
-      return <span data-testid="trunfo-card">Super Trunfo</span>;
+      return (
+        <span data-testid="trunfo-card" id={ styles.Trunfo }>
+          Super Trunfo
+        </span>
+      );
     }
     return null;
   }

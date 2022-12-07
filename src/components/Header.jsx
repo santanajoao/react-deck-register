@@ -6,7 +6,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className={ styles.Header }>
-        <img src={ logo } className={ styles.logo } alt="logo tryunfo" />
+        <img src={ logo } alt="logo tryunfo" />
       </header>
     );
   }
