@@ -4,20 +4,23 @@ import styles from '../styles/CheckboxInput.module.css';
 
 export default class CheckboxInput extends React.Component {
   render() {
-    const { onInputChange, cardTrunfo, hasTrunfo } = this.props;
+    const {
+      id, name, onInputChange, checked, hasTrunfo,
+    } = this.props;
+
     if (hasTrunfo) {
       return <p>Você já tem um Super Trunfo em seu baralho</p>;
     }
 
     return (
-      <label htmlFor="trunfo-input" className={ styles.CheckboxInput }>
+      <label htmlFor={ id } className={ styles.CheckboxInput }>
         <input
           type="checkbox"
           onChange={ onInputChange }
-          name="cardTrunfo"
-          id="trunfo-input"
-          data-testid="trunfo-input"
-          checked={ cardTrunfo }
+          name={ name }
+          id={ id }
+          data-testid={ id }
+          checked={ checked }
         />
         <span>Super Trybe Trunfo</span>
       </label>
@@ -26,7 +29,9 @@ export default class CheckboxInput extends React.Component {
 }
 
 CheckboxInput.propTypes = {
-  cardTrunfo: PropTypes.bool.isRequired,
+  checked: PropTypes.bool.isRequired,
   hasTrunfo: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
 };

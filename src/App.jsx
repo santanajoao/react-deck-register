@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Title from './components/Title';
 import Form from './components/Form';
 import Card from './components/Card';
+import Filters from './components/Filters';
 import CardList from './components/CardList';
 
 const INITIAL_STATE = {
@@ -22,7 +23,10 @@ class App extends React.Component {
   state = {
     ...INITIAL_STATE,
     hasTrunfo: false,
+    nameFilter: '',
+    rareFilter: '',
     savedCards: [],
+    trunfoFilter: false,
   };
 
   isEmpty = (...values) => (
@@ -119,7 +123,7 @@ class App extends React.Component {
   };
 
   render() {
-    const { savedCards } = this.state;
+    const { nameFilter, rareFilter, savedCards, trunfoFilter } = this.state;
     return (
       <div className={ styles.App }>
         <Header />
@@ -137,9 +141,22 @@ class App extends React.Component {
           </section>
         </article>
         <section className={ styles.filterAndCardList }>
+          <Title content="Todas as cartas" color="white" />
+
+          <Filters
+            trunfoFilter={ trunfoFilter }
+            rareFilter={ rareFilter }
+            onInputChange={ this.onInputChange }
+            nameFilter={ nameFilter }
+          />
+
           <CardList
             savedCards={ savedCards }
             removeCardFromList={ this.removeCardFromList }
+            onInputChange={ this.onInputChange }
+            nameFilter={ nameFilter }
+            rareFilter={ rareFilter }
+            trunfoFilter={ trunfoFilter }
           />
         </section>
       </div>

@@ -75,8 +75,10 @@ export default class Form extends Component {
         <div className={ styles.checkboxAndButton }>
           <CheckboxInput
             onInputChange={ onInputChange }
+            name="cardTrunfo"
+            id="trunfo-input"
             hasTrunfo={ hasTrunfo }
-            cardTrunfo={ cardTrunfo }
+            checked={ cardTrunfo }
           />
 
           <button

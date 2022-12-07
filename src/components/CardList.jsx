@@ -1,42 +1,62 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/CardList.module.css';
-import Title from './Title';
 import Card from './Card';
 
 export default class CardList extends Component {
   render() {
-    const { savedCards, removeCardFromList } = this.props;
+    const {
+      nameFilter, removeCardFromList, rareFilter, savedCards, trunfoFilter,
+    } = this.props;
+
     if (savedCards.length === 0) {
       return null;
     }
 
+    let filtered;
+    if (trunfoFilter) {
+      filtered = savedCards.filter(
+        ({ cardTrunfo }) => cardTrunfo === trunfoFilter,
+      );
+    } else {
+      filtered = savedCards.filter(
+        ({ cardName }) => cardName.includes(nameFilter),
+      ).filter(({ cardRare }) => {
+        let filter = rareFilter;
+        if (rareFilter === 'todas') filter = '';
+        if (rareFilter === 'raro') {
+          return cardRare === rareFilter;
+        }
+        return cardRare.includes(filter);
+      });
+    }
+
     return (
-      <>
-        <Title content="Todas as cartas" color="white" />
-        <ul className={ styles.CardList }>
-          {
-            savedCards.map((cardObj) => (
-              <li key={ cardObj.id }>
-                <Card { ...cardObj } />
-                <button
-                  type="button"
-                  onClick={ removeCardFromList }
-                  id={ cardObj.id }
-                  data-testid="delete-button"
-                >
-                  Excluir
-                </button>
-              </li>
-            ))
-          }
-        </ul>
-      </>
+      <ul className={ styles.CardList }>
+        {
+          filtered.map((cardObj) => (
+            <li key={ cardObj.id }>
+              <Card { ...cardObj } />
+              <button
+                type="button"
+                onClick={ removeCardFromList }
+                id={ cardObj.id }
+                data-testid="delete-button"
+              >
+                Excluir
+              </button>
+            </li>
+          ))
+        }
+      </ul>
     );
   }
 }
 
 CardList.propTypes = {
+  nameFilter: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  rareFilter: PropTypes.string.isRequired,
   removeCardFromList: PropTypes.func.isRequired,
   savedCards: PropTypes.arrayOf(
     PropTypes.shape({
@@ -51,4 +71,5 @@ CardList.propTypes = {
       id: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  trunfoFilter: PropTypes.bool.isRequired,
 };
