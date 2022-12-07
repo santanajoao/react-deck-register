@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/Form.module.css';
+import Title from './Title';
 import VerticalInput from './VerticalInput';
 import HorizontalInput from './HorizontalInput';
 import Select from './Select';
@@ -16,6 +17,7 @@ export default class Form extends Component {
 
     return (
       <form className={ styles.Form }>
+        <Title content="Adicione nova carta" color="green" />
         <VerticalInput
           value={ cardName }
           type="text"

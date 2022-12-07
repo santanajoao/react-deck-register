@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/CardList.module.css';
+import Title from './Title';
 import Card from './Card';
 
 export default class CardList extends Component {
   render() {
     const { savedCards, removeCardFromList } = this.props;
+    if (savedCards.length === 0) {
+      return null;
+    }
+
     return (
-      <ul className={ styles.CardList }>
-        {
-          savedCards.map((cardObj) => (
-            <li key={ cardObj.id }>
-              <Card { ...cardObj } />
-              <button
-                type="button"
-                onClick={ removeCardFromList }
-                id={ cardObj.id }
-                data-testid="delete-button"
-              >
-                Excluir
-              </button>
-            </li>
-          ))
-        }
-      </ul>
+      <>
+        <Title content="Todas as cartas" color="white" />
+        <ul className={ styles.CardList }>
+          {
+            savedCards.map((cardObj) => (
+              <li key={ cardObj.id }>
+                <Card { ...cardObj } />
+                <button
+                  type="button"
+                  onClick={ removeCardFromList }
+                  id={ cardObj.id }
+                  data-testid="delete-button"
+                >
+                  Excluir
+                </button>
+              </li>
+            ))
+          }
+        </ul>
+      </>
     );
   }
 }

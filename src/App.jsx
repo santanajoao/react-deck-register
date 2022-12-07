@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './App.module.css';
 import Header from './components/Header';
+import Title from './components/Title';
 import Form from './components/Form';
 import Card from './components/Card';
 import CardList from './components/CardList';
@@ -130,7 +131,10 @@ class App extends React.Component {
             onSaveButtonClick={ this.onSaveButtonClick }
           />
 
-          <Card { ...this.state } />
+          <section>
+            <Title content="Adicione nova carta" color="green" />
+            <Card { ...this.state } />
+          </section>
         </article>
         <section className={ styles.filterAndCardList }>
           <CardList
