@@ -2,6 +2,10 @@
   width: 405px;
 }
 
+.Form h1 {
+  margin-bottom: 10px;
+}
+
 .checkboxAndButton {
   align-items: center;
   display: flex;
