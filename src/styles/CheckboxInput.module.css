@@ -1,4 +1,4 @@
-.CheckboxInput span {
+.CheckboxInput > span {
   color: #3D495C;
   font-family: 'Epilogue', sans-serif;
   font-size: 16px;

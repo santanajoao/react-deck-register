@@ -10,7 +10,7 @@
 
 .Card > h2 {
   align-items: center;
-  background: #023031;
+  background-color: #023031;
   border-radius: 10px 10px 0 0;
   color: white;
   display: flex;

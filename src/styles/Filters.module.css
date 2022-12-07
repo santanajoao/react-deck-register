@@ -31,6 +31,7 @@
 }
 
 .Filters > select {
+  padding-left: 10px;
   outline: none;
   height: 41px;
   background-color: transparent;
@@ -39,6 +40,16 @@
   font-size: 14px;
   color: white;
   width: 331px;
+}
+
+.Filters > input[name="nameFilter"]:disabled {
+  border: 1px solid gray;
+  color: gray;
+}
+
+.Filters > select:disabled {
+  border: 1px solid gray;
+  color: gray;
 }
 
 .Filters > select:focus {

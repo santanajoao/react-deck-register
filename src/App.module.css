@@ -20,3 +20,7 @@
 .formAndPreview  h1 {
   margin-bottom: 40px;
 }
+
+.filterAndCardList {
+  min-height: 30vh;
+}
