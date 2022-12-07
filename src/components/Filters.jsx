@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import CheckboxInput from './CheckboxInput';
+import styles from '../styles/Filters.module.css';
 
 export default class Filters extends Component {
   render() {
     const { nameFilter, onInputChange, rareFilter, trunfoFilter } = this.props;
     return (
-      <section>
+      <section className={ styles.Filters }>
         <h3>Filtros de busca</h3>
 
         <input
