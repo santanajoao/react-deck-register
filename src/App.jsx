@@ -69,7 +69,7 @@ class App extends React.Component {
     const letters = 'abcdefghijklmnoprstuvwxyz';
     const numbers = '0123456789';
     const simbols = '!@#$%&_-~';
-    const all = letters + numbers + simbols;
+    const all = letters + numbers + simbols + letters.toUpperCase();
     const keyLength = 5;
     let key = '';
     while (key.length < keyLength) {

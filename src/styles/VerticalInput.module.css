@@ -7,7 +7,6 @@
 .VerticalInput > span {
   color: #3D495C;
   display: block;
-  font-family: 'Epilogue', sans-serif;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 5px;
@@ -27,6 +26,7 @@
 }
 
 .textarea {
+  font-family: Arial, Helvetica, sans-serif;
   height: 80px;
   resize: none;
 }
