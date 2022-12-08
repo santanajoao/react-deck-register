@@ -7,7 +7,7 @@ export default class Trunfo extends Component {
     const { cardTrunfo } = this.props;
     if (cardTrunfo) {
       return (
-        <span data-testid="trunfo-card" id={ styles.Trunfo }>
+        <span data-testid="trunfo-card" className={ styles.Trunfo }>
           Super Trunfo
         </span>
       );

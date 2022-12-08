@@ -1,12 +1,12 @@
 .Select {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   margin: 15px 0;
+  width: fit-content;
 }
 
 .Select > span {
-  color: #3D495C;
+  color: rgb(61, 73, 92);
   font-size: 16px;
   font-weight: 700;
 }
@@ -14,8 +14,8 @@
 .Select > select {
   background-color: white;
   border: none;
-  border-bottom: 1px solid #3D495C;
-  color: #C5C9CE;
+  border-bottom: 1px solid rgb(61, 73, 92);
+  color: rgb(197, 201, 206);
   font-size: 14px;
   height: 40px;
   outline: none;
@@ -23,6 +23,6 @@
 }
 
 .Select > select:focus {
-  color: #3D495C;
+  color: rgb(61, 73, 92);
   height: 40px;
 }

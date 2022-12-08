@@ -30,7 +30,9 @@ export default class Card extends Component {
           </li>
         </ul>
         <div>
-          <span data-testid="rare-card">{ cardRare }</span>
+          <span data-testid="rare-card" className={ styles.cardRare }>
+            { cardRare }
+          </span>
           <Trunfo cardTrunfo={ cardTrunfo } />
         </div>
       </div>

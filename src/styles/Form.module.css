@@ -28,10 +28,10 @@
   background-color: lightgray;
 }
 
-.checkboxAndButton > button:disabled:hover {
-  background-color: lightgray;
-}
-
 .checkboxAndButton > button:hover {
   background-color: rgb(40, 185, 135);
+}
+
+.checkboxAndButton > button:disabled:hover {
+  background-color: lightgray;
 }

@@ -1,47 +1,47 @@
 .Filters {
-  margin: 10px 0 25px;
-  width: 1124px;
+  align-items: center;
+  background-color: rgb(3, 107, 82);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: rgb(3, 107, 82);
   height: 75px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: space-evenly;
+  margin: 10px 0 25px;
+  width: 1124px;
 }
 
 .Filters > h3 {
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
 }
 
-.Filters input[name="nameFilter"] {
-  box-sizing: border-box;
+.nameFilter {
   background-color: transparent;
   border: 1px solid white;
-  color: white !important;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
   font-size: 14px;
   height: 42px;
-  border-radius: 5px;
-  width: 330px;
-  padding-left: 10px;
   outline: none;
+  padding-left: 10px;
+  width: 330px;
 }
 
 .Filters > select {
-  padding-left: 10px;
-  outline: none;
-  height: 41px;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
-  font-size: 14px;
   color: white;
+  font-size: 14px;
+  height: 41px;
+  outline: none;
+  padding-left: 10px;
   width: 331px;
 }
 
-.Filters > input[name="nameFilter"]:disabled {
+.nameFilter:disabled {
   border: 1px solid gray;
   color: gray;
 }
@@ -57,6 +57,6 @@
 
 .Filters > label > span {
   color: white;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
 }

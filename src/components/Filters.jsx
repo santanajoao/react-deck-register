@@ -18,6 +18,7 @@ export default class Filters extends Component {
           name="nameFilter"
           disabled={ trunfoFilter }
           data-testid="name-filter"
+          className={ styles.nameFilter }
         />
 
         <select
