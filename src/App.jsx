@@ -38,9 +38,9 @@ class App extends React.Component {
     const maxSum = 210;
     let sum = 0;
     return values.every((value) => {
-      const number = Number(value);
+      const number = parseInt(value, 10);
       sum += number;
-      return number >= 0 && number <= maxAttr && sum <= maxSum && value !== '';
+      return number > 0 && number <= maxAttr && sum <= maxSum && value !== '';
     });
   };
 

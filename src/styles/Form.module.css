@@ -35,3 +35,8 @@
 .checkboxAndButton > button:disabled:hover {
   background-color: lightgray;
 }
+
+.attributeMessage {
+  color: rgb(255, 50, 0);
+  font-size: 14px;
+}

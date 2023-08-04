@@ -28,17 +28,17 @@
   display: block;
   height: 200px;
   width: 100%;
+  object-fit: cover;
 }
 
 .Card > p {
-  background-color: transparent;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300px;
   margin: 5px;
   max-height: 45px;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   word-wrap: break-word;
 }
 

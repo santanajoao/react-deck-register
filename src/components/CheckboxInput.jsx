@@ -9,7 +9,11 @@ export default class CheckboxInput extends React.Component {
     } = this.props;
 
     if (hasTrunfo) {
-      return <p>Você já tem um Super Trunfo em seu baralho</p>;
+      return (
+        <p className={ styles.trunfoMessage }>
+          Você já tem um Super Trunfo em seu baralho
+        </p>
+      );
     }
 
     return (

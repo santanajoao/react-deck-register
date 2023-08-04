@@ -7,6 +7,8 @@ import HorizontalInput from './HorizontalInput';
 import Select from './Select';
 import CheckboxInput from './CheckboxInput';
 
+const toNum = (value) => parseInt(value, 10);
+
 export default class Form extends Component {
   render() {
     const {
@@ -14,6 +16,9 @@ export default class Form extends Component {
       cardImage, cardName, cardTrunfo, cardRare, hasTrunfo,
       isSaveButtonDisabled, onSaveButtonClick, onInputChange,
     } = this.props;
+
+    const attrSum = toNum(cardAttr1) + toNum(cardAttr2) + toNum(cardAttr3);
+    const maxSum = 210;
 
     return (
       <form className={ styles.Form }>
@@ -60,6 +65,12 @@ export default class Form extends Component {
           id="attr3-input"
           content="Attr03"
         />
+
+        {attrSum > maxSum && (
+          <span className={ styles.attributeMessage }>
+            A soma dos atributos deve ser no máximo 210
+          </span>
+        )}
 
         <HorizontalInput
           value={ cardImage }

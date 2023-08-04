@@ -13,10 +13,10 @@ export default class HorizontalInput extends Component {
     const maxAttr = 90;
 
     if (type === 'number') {
-      input = <input min="0" max="90" data-testid={ id } { ...commonProps } />;
+      input = <input min="1" max="90" data-testid={ id } { ...commonProps } />;
 
       const number = Number(value);
-      validationStatus = number >= 0 && number <= maxAttr && value !== '';
+      validationStatus = number > 0 && number <= maxAttr && value !== '';
     } else {
       input = (
         <input data-testid={ id } { ...commonProps } />

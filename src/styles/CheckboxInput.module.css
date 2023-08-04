@@ -10,3 +10,8 @@
   margin-right: 10px;
   width: 16px;
 }
+
+.trunfoMessage {
+  color: rgb(255, 50, 0);
+  font-size: 14px;
+}
